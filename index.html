@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Pizza Order Form</h1>
+    <p>Fill out the form to place your pizza order.</p>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <!-- Pizza Order Form -->
+    <form action="order_confirmation.html" method="post">
+      <!-- Number of Pizzas -->
+      <label for="numPizzas">Number of Pizzas:</label>
+      <input type="number" id="numPizzas" name="numPizzas" min="1" required>
+
+      <!-- Size of Pizzas -->
+      <fieldset>
+        <legend>Size of Pizzas:</legend>
+        <label><input type="radio" name="pizzaSize" value="small" required> Small</label>
+        <label><input type="radio" name="pizzaSize" value="medium"> Medium</label>
+        <label><input type="radio" name="pizzaSize" value="large"> Large</label>
+      </fieldset>
+
+      <!-- Shape of Pizzas -->
+      <label for="pizzaShape">Shape of Pizzas:</label>
+      <select id="pizzaShape" name="pizzaShape" required>
+        <option value="round">Round</option>
+        <option value="square">Square</option>
+      </select>
+
+      <!-- Toppings -->
+      <label>Toppings:</label>
+      <input type="checkbox" name="topping" value="pepperoni"> Pepperoni
+      <input type="checkbox" name="topping" value="mushrooms"> Mushrooms
+      <input type="checkbox" name="topping" value="olives"> Olives
+
+      <!-- Crust Type -->
+      <label for="crustType">Crust Type:</label>
+      <select id="crustType" name="crustType" required>
+        <option value="deepDish">Deep Dish</option>
+        <option value="thinCrust">Thin Crust</option>
+        <option value="regular">Regular</option>
+      </select>
+
+      <!-- Delivery Options -->
+      <fieldset>
+        <legend>Delivery Options:</legend>
+        <label><input type="radio" name="deliveryOption" value="takeOut" required> Take Out</label>
+        <label><input type="radio" name="deliveryOption" value="delivery"> Delivery</label>
+        <label><input type="radio" name="deliveryOption" value="eatIn"> Eat In</label>
+      </fieldset>
+
+      <!-- Additional Information -->
+      <label for="additionalInfo">Additional Information:</label>
+      <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50"></textarea>
+
+      <!-- Submit Button -->
+      <input type="submit" value="Place Order">
+      <input type="reset" value="Reset Form">
+    </form>
+
+    <!-- Pizza Illustration -->
+    <p>Enjoy your delicious pizza!<br>
+      <img src="pizza.jpg" alt="Delicious Pizza">
+    </p>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2023 Pizza Delight</p>
+  </footer>
+
+</body>
+</html>
